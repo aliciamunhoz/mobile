@@ -10,7 +10,7 @@ type MarketsProps = PlaceProps;
 export default function Home() {
   const [categories, setCategories] = useState<CategoriesProps>([]);
   const [category, setCategory] = useState("");
-  const [markets, setMarkets] = useState<MarketsProps>();
+  const [markets, setMarkets] = useState<MarketsProps[]>([]);
 
   async function fetchCategories() {
     try {

@@ -5,7 +5,7 @@ import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import { s } from "./styles";
 
 type Props = {
-  data: [PlaceProps];
+  data: PlaceProps[];
 };
 
 export function Places({ data }: Props) {
@@ -28,7 +28,7 @@ export function Places({ data }: Props) {
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <Place data={item} />}
-        contentContainerStyle={s.container}
+        contentContainerStyle={s.content}
         ListHeaderComponent={() => (
           <Text style={s.title}>Explore locais perto de você.</Text>
         )}
